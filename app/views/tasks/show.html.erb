@@ -3,7 +3,7 @@
     <div class="col">
       <table class="table">
         <% x = 0 %>
-          <h1> TOP 5 </h1>
+          <h1 class="text-center"> TOP 5 </h1>
           <% @five_first.first(5).each do |f| %>
           <tr>
             <td> <%= "#{x + 1}" %> </td>
@@ -14,7 +14,7 @@
       </table>
       <div class ="row">
         <div class="col">
-          <h1> COMPLETADA POR TODOS </h1>
+          <h1 class="text-center"> COMPLETADA POR TODOS </h1>
           <table class="table">
             <% @five_first.each do |f| %>
               <tr>

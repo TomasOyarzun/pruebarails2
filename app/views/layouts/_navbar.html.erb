@@ -9,7 +9,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="<%= destroy_user_session_path%>" data-method="DELETE"> Salir </a>
       </li>
-      <h1> TAREAS REALIZADAS: <%= current_user.tasks.count %> / <%=Task.count %></h1>
+      <h3 class="text-primary"> TAREAS REALIZADAS POR USUARIO: <%= current_user.tasks.count %> de <%=Task.count %> </h3>
       <% else %>
           <li class="nav-item active"><a class="nav-link" href="<%= new_user_session_path%>"> Logearse </a></li>
           <li class="nav-item"><a class="nav-link" href="<%= new_user_registration_path%>"> Registrarse </a></li>
