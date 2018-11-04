@@ -1,7 +1,7 @@
 <div class="container">
   <div class ="row">
-    <% @tasks.each_slice(3) do |row| %>
-      <% row.each do |task| %>
+    <% @tasks.each_slice(4) do |r| %>
+      <% r.each do |task| %>
         <div class="col">
           <div class="card">
             <%= image_tag task.photo, class:"card-img-top"%>
@@ -11,7 +11,7 @@
           </div>
         </div>
      <% end %>
-     <div class="w-100" style="margin-top:20px"></div>
+     <div class="w-100" style="margin-top:50px"></div>
      <% end %>
   </div>
 </div>
