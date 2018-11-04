@@ -7,6 +7,14 @@
             <%= image_tag task.photo, class:"card-img-top"%>
               <div class="card-body">
                 <h5> <%= task.name%></h5>
+                <% if task.users.include?(current_user) %>
+                <p> La tarea está completada! </p>
+                  <%= link_to 'INCOMPLETA', tasks_incomplete_path(task), class: 'btn btn-danger', method: :delete %>
+                <% else %>
+                <p> La tarea está incompleta! </p>
+                  <%= link_to 'COMPLETA', tasks_complete_path(task), class: 'btn btn-success' %>
+                <% end %>
+                <%= link_to "MOSTRAR", task, class: 'btn btn-warning' %>
               </div>
           </div>
         </div>
