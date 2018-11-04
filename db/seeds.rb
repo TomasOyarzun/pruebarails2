@@ -18,6 +18,6 @@ end
     password: "asdfasdf",
     password_confirmation: "asdfasdf",
     name: Faker::Hobbit.character,
-    photo: "https://static1.funidelia.com/26258-f4_large/mascara-de-mario-bros-para-adulto.jpg"
+    photo: "https://pm1.narvii.com/6465/9119a93da310f9ee56ad6c0d676b923ac19cf083_128.jpg"
   )
 end
