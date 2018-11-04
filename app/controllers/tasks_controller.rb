@@ -7,7 +7,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
-    @names = @task.users.pluck(:name)
+    @five_first = @task.users
   end
 
   def complete

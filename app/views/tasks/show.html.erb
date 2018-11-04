@@ -2,11 +2,29 @@
   <div class ="row">
     <div class="col">
       <table class="table">
-        <% @names.each do |name| %>
-          <tr><td> <%= name %> </td></tr>
-      <% end %>
+        <% x = 0 %>
+          <h1> TOP 5 </h1>
+          <% @five_first.first(5).each do |f| %>
+          <tr>
+            <td> <%= "#{x + 1}" %> </td>
+            <td> <%= f.name %> </td>
+            <td> <%= image_tag(f.photo) %> </td>
+          </tr>
+        <% end %>
       </table>
+      <div class ="row">
+        <div class="col">
+          <h1> COMPLETADA POR TODOS </h1>
+          <table class="table">
+            <% @five_first.each do |f| %>
+              <tr>
+                <td> <%= f.name %> </td>
+              </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
     </div>
-    <div class="w-100" style="margin-top:20px"></div>
   </div>
 </div>
+
